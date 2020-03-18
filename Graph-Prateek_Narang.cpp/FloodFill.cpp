@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int arr[101][101];
+
 void floodfill(int a, int b, int k, int n, int m, int  arr[][m], int c)
 {
   if(a<=0|| b<=0|| a>=n||b>=m || arr[a][b]!=c)
@@ -25,8 +27,6 @@ int main()
   {
       int n , m;
       cin >> n >> m;
-
-      int arr[n][m];
 
       for(ll i = 0; i<n; i++)
       {
