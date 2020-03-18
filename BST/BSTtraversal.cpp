@@ -1,10 +1,9 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>x
 using namespace std;
 
 struct node
 {
 	int data;
-	node * head;
 	node * left;
 	node * right;
 };
@@ -15,7 +14,7 @@ void preorder(node * head)
 	return;
 	
 	cout << head->data << endl;
-	
+		
 	preorder(head->left);
 	preorder(head->right);
 }
@@ -35,25 +34,14 @@ void postorder(node * head)
 void inorder(node * head)
 {
 	if(head == NULL)
-	return;
+	{
+		return;
+	}
 	
 	inorder(head->left);
 	cout << head->data << endl;
 	inorder(head->right);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 node * createnewnode(node * head, int data)
 {
@@ -64,7 +52,6 @@ node * createnewnode(node * head, int data)
   temp->left = NULL;
   
   return temp;
-
 }
 
 node * insert(node * head, int data)
@@ -97,5 +84,5 @@ int main()
 		head = insert(head, x);
 	}
 	
-	preorder(head);
+	inorder(head);
 }
