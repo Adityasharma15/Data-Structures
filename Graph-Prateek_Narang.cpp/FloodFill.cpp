@@ -5,17 +5,17 @@ using namespace std;
 
 int arr[101][101];
 
-void floodfill(int a, int b, int k, int n, int m, int  arr[][m], int c)
+void floodfill(int a, int b, int k, int n, int m, int c)
 {
   if(a<=0|| b<=0|| a>=n||b>=m || arr[a][b]!=c)
     return;
 
   arr[a][b] = k;
 
-  floodfill(a - 1 , b + 1, k, arr, n , m , c);
-  floodfill(a - 1 , b - 1, k, arr, n , m , c);
-  floodfill(a + 1 , b + 1, k, arr, n , m , c);
-  floodfill(a + 1 , b - 1, k, arr, n , m , c);
+  floodfill(a - 1 , b + 1, k, n , m , c);
+  floodfill(a - 1 , b - 1, k, n , m , c);
+  floodfill(a + 1 , b + 1, k, n , m , c);
+  floodfill(a + 1 , b - 1, k, n , m , c);
 }
 
 int main()
@@ -39,7 +39,7 @@ int main()
 
       int c = arr[a][b];
 
-      floodfill(a, b, k, n , m, arr, c);
+      floodfill(a, b, k, n , m, c);
 
       for(ll i = 0; i<n; i++)
       {

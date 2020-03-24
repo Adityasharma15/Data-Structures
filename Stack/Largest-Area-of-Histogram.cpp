@@ -52,7 +52,7 @@ int main()
       s.pop();
 
       if(!s.empty())
-        area = max( (arr[top] * (i - top - 1) ), area);
+        area = max( (arr[top] * (i - s.top() - 1) ), area);
 
       else
         area = max( arr[top]*i, area);
