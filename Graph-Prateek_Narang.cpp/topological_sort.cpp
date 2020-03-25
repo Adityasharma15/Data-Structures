@@ -18,15 +18,12 @@ void topSortUtil(bool * visited, int v, vector<int> adj[], int i,stack<int> s)
 }
 
 
-
-
 int * topSort(int v, vector<int> adj[])
 {
   bool visited[v];
   memset(visited, false, sizeof(visited));
 
   int * arr;
-
   arr = new int[v];
 
   stack<int> s;
@@ -44,9 +41,7 @@ int * topSort(int v, vector<int> adj[])
   }
 
   return arr;
-
 }
-
 
 int main()
 {
@@ -59,7 +54,6 @@ int main()
 
 	while(t--)
   {
-
       int n, e;
       cin >> n >> e;
 
@@ -73,14 +67,14 @@ int main()
             adj[u].push_back(v);
           }
 
-      int * res = topSort(N, adj);
+      int * res = topSort(n, adj);
 
-          for(auto i: res)
-            cout << i << " ";
+      for(ll i = 0; i<n; i++)
+          cout << res[i] << " ";
 
           cout << "\n";
 
-          return 0;
 	}
 
+  return 0;
 }
