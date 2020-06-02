@@ -70,7 +70,6 @@ void updateRange(vector<ll> &tree, ll index, ll updateleft, ll updateright, ll i
 
   if(left==right)
   {
-    cout << "!@#$%^&*()_)(*&^%$#@@!@#$%^&*())" << "\n";
     tree[index]+=increment;
     return;
   }
@@ -79,7 +78,6 @@ void updateRange(vector<ll> &tree, ll index, ll updateleft, ll updateright, ll i
   updateRange(tree, index*2, updateleft, updateright, increment, left , mid);
   updateRange(tree, index*2 + 1, updateleft, updateright, increment, mid+1, right);
   tree[index] = min(tree[index*2] , tree[index*2 +1]);
-
 }
 
 int main()
@@ -88,11 +86,17 @@ int main()
   cin.tie(0);
 	cout.tie(0);
 
+  ll t;
+  cin >> t;
+
+  while(t--)
+  {
   ll n;
   cin >> n;
-  vector<ll> vec(n);
+  vector<ll> vec(n,0);
 
-  for(ll i = 0;i <n; i++) cin >> vec[i];
+  for(ll i = 0;i <n; i++)
+    cin >> vec[i];
 
   // 4*n + 1 is an approximated upper bound
   vector<ll> tree(4*n + 1, 0);
@@ -104,17 +108,28 @@ int main()
   cin >> q;
 
   ll ql, qr;
+  ll countquery = 0;
+
   while(q--)
   {
     cin >> ql >> qr;
-    cout << query(tree, 1, ql, qr, 0, n - 1) << "\n";
+
+    if(ql>qr)
+      swap(ql, qr);
+
+    cout << query(tree, 1, ql, qr, 0, n - 1) << " ";
+    countquery++;
   }
 
-  ll updateindex = 2 , updateValue = -3;
+  cout << "\n" << countquery << "\n";
+
+  // ll updateindex = 2 , updateValue = -3;
   // updateNode(tree, 1, updateindex, updateValue, 0, n-1);
 
-  updateRange(tree, 1, 0, 3, 4, 0, n-1);
-  for(auto i: tree) cout << i << " ";
+  // updateRange(tree, 1, 0, 3, 4, 0, n-1);
+  // for(auto i: tree) cout << i << " ";
+
+  }
 
   return 0;
 }
