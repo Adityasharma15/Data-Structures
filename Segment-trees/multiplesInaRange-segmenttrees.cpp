@@ -84,8 +84,9 @@ int main()
   if(ql>qr)
     swap(ql, qr);
 
-  cout << query(tree, 1, ql-1, qr-1, 0, n - 1) << "\n";
+  cout << query(tree, 1, ql-1, qr-1, 0, n - 1) << " ";
     }
+    cout << "\n";
   }
   return 0;
 }

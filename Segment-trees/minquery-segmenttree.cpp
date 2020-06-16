@@ -108,7 +108,6 @@ int main()
   cin >> q;
 
   ll ql, qr;
-  ll countquery = 0;
 
   while(q--)
   {
@@ -118,10 +117,8 @@ int main()
       swap(ql, qr);
 
     cout << query(tree, 1, ql, qr, 0, n - 1) << " ";
-    countquery++;
   }
 
-  cout << "\n" << countquery << "\n";
 
   // ll updateindex = 2 , updateValue = -3;
   // updateNode(tree, 1, updateindex, updateValue, 0, n-1);
