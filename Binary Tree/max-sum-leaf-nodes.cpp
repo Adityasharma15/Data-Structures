@@ -20,7 +20,7 @@ pair<int,int> maxPathSumUtil(Node *root)
     if(root->right == NULL)
         return { (p1.first + root->data), INT_MIN};
 
-return {(max(p1.first, p2.first) + root->data),max( max(p1.second, p2.second) ,(p1.first + p2.first + root->data))};
+      return {(max(p1.first, p2.first) + root->data), max( max(p1.second, p2.second) ,(p1.first + p2.first + root->data))};
 }
 
 
