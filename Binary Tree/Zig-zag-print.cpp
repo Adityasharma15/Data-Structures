@@ -37,7 +37,6 @@ public:
         }
 
         vector<vector<int>> ans(maxi+1);
-        int count = 0;
         for(auto i:mapp)
         {
             vector<int> v = i.second;
@@ -49,8 +48,6 @@ public:
             for(auto j:v)
             { ans[i.first].push_back(j);
             }
-
-            count++;
         }
 
         return ans;
