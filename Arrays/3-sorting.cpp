@@ -16,7 +16,10 @@ public:
             {
                 swap(nums[curr++], nums[start++]);
             }
-
+           
+            // take care that we don't increase curr
+            // if we take down from 2, because it can be a
+            // 0. We don't do this with 0.
             else if(nums[curr] == 2)
             {
                 swap(nums[curr], nums[end--]);
