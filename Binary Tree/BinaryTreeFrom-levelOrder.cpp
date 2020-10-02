@@ -40,6 +40,8 @@ cout.tie(0);
   ll x;
 
   vector<ll> v;
+	  
+	  
 
   while(1)
   {
