@@ -1,5 +1,6 @@
 //Arrays with sum equal to 0 or k
 
+
 #include<bits/stdc++.h>
 #define ll long long
 using namespace std;
