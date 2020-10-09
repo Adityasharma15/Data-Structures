@@ -7,7 +7,6 @@ public:
         if(!root)
             return 0;
 
-        int depth = max(maxDepth(root->left), maxDepth(root->right)) + 1;
-        return depth;
+        return max(maxDepth(root->left), maxDepth(root->right)) + 1;
     }
 };
