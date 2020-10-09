@@ -12,7 +12,9 @@ public:
 
         if(!root->right)
             return 1 + minDepth(root->left);
-
+        
+        // we have a choice only when both left and right nodes, otherwise
+        // only one choice is there
         return min(minDepth(root->left), minDepth(root->right)) + 1;
     }
 };
