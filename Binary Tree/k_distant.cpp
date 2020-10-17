@@ -4,7 +4,7 @@ class Solution {
 
 // we can't perform bfs to all adjacent neighbours of our target node
 // because this is a tree, so if we store parents of each node, then
-// our problem is solved
+// our problem is solved for this case
 
 vector<int> k_distant;
 unordered_map<TreeNode * , TreeNode * > parent;
